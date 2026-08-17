@@ -116,6 +116,10 @@ h1 {
   border-radius: 999px;
   text-decoration: none;
   font-weight: 700;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 1rem;
 }
 
 .btn.primary {
@@ -126,6 +130,7 @@ h1 {
 .btn.secondary {
   border: 1px solid var(--gold);
   color: var(--text-light);
+  background: transparent;
 }
 
 .section {
@@ -187,6 +192,100 @@ h1 {
 .card p {
   font-size: 1rem;
   margin-bottom: 0;
+}
+
+/* Tools section */
+.tool-card {
+  max-width: 720px;
+  background: var(--card);
+  border-radius: 18px;
+  padding: 32px;
+  margin-top: 12px;
+  box-shadow: 0 12px 35px rgba(7, 17, 31, 0.08);
+}
+
+.tool-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px 20px;
+}
+
+.tool-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.tool-field label {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.tool-field .optional {
+  font-weight: 400;
+  color: #6b7280;
+  text-transform: none;
+  letter-spacing: 0;
+}
+
+.tool-field input {
+  font-family: inherit;
+  font-size: 1rem;
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1px solid rgba(7, 17, 31, 0.18);
+  background: #fff;
+  color: var(--text);
+}
+
+.tool-field input:focus {
+  outline: 2px solid var(--gold);
+  outline-offset: 1px;
+}
+
+.tool-submit {
+  grid-column: 1 / -1;
+  justify-self: start;
+  margin-top: 6px;
+}
+
+.tool-results {
+  margin-top: 28px;
+  padding-top: 24px;
+  border-top: 1px solid rgba(7, 17, 31, 0.12);
+}
+
+.result-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 8px 0;
+  font-size: 1.05rem;
+}
+
+.result-row strong {
+  color: var(--text);
+}
+
+.tool-note {
+  margin-top: 14px;
+  font-size: 0.95rem;
+  color: #6b7280;
+}
+
+.tool-disclaimer {
+  margin-top: 22px;
+  font-size: 0.82rem;
+  color: #6b7280;
+  font-style: italic;
+  max-width: none;
+}
+
+@media (max-width: 620px) {
+  .tool-form {
+    grid-template-columns: 1fr;
+  }
 }
 
 .timeline {
