@@ -15,6 +15,7 @@
       <div class="nav-links">
         <a href="#mission">Mission</a>
         <a href="#areas">Learning Areas</a>
+        <a href="#tools">Tools</a>
         <a href="#roadmap">Roadmap</a>
         <a href="https://www.scientiacapital.co.uk/" target="_blank">Scientia Capital</a>
       </div>
@@ -77,6 +78,72 @@
       </div>
     </section>
 
+    <section id="tools" class="section">
+      <p class="section-label">Free Tools</p>
+      <h2>Position Size &amp; Risk Calculator</h2>
+      <p>
+        Every trade idea in a Scientia report includes an entry, a stop-loss, and a take-profit level. This
+        calculator turns those three numbers into a position size that keeps a single trade's risk to a fixed
+        share of an account, the same discipline behind the "Play with Markets" framework.
+      </p>
+
+      <div class="tool-card">
+        <form id="risk-calculator" class="tool-form" autocomplete="off">
+          <div class="tool-field">
+            <label for="account-size">Account size</label>
+            <input type="number" id="account-size" min="0" step="any" placeholder="e.g. 10000" required />
+          </div>
+
+          <div class="tool-field">
+            <label for="risk-percent">Risk per trade (%)</label>
+            <input type="number" id="risk-percent" min="0" max="100" step="any" placeholder="e.g. 1" required />
+          </div>
+
+          <div class="tool-field">
+            <label for="entry-price">Entry price</label>
+            <input type="number" id="entry-price" min="0" step="any" placeholder="e.g. 55.20" required />
+          </div>
+
+          <div class="tool-field">
+            <label for="stop-price">Stop-loss price</label>
+            <input type="number" id="stop-price" min="0" step="any" placeholder="e.g. 52.80" required />
+          </div>
+
+          <div class="tool-field">
+            <label for="target-price">Take-profit price <span class="optional">(optional)</span></label>
+            <input type="number" id="target-price" min="0" step="any" placeholder="e.g. 61.00" />
+          </div>
+
+          <button type="submit" class="btn primary tool-submit">Calculate</button>
+        </form>
+
+        <div id="risk-results" class="tool-results" hidden>
+          <div class="result-row">
+            <span>Dollar risk</span>
+            <strong id="result-risk-amount">—</strong>
+          </div>
+          <div class="result-row">
+            <span>Position size</span>
+            <strong id="result-shares">—</strong>
+          </div>
+          <div class="result-row">
+            <span>Position value</span>
+            <strong id="result-position-value">—</strong>
+          </div>
+          <div class="result-row" id="result-rr-row" hidden>
+            <span>Reward:risk</span>
+            <strong id="result-rr">—</strong>
+          </div>
+          <p id="result-note" class="tool-note"></p>
+        </div>
+
+        <p class="tool-disclaimer">
+          Educational tool only. It does not constitute financial advice and does not account for fees,
+          slippage, taxes, or position limits. Always validate figures independently before acting on them.
+        </p>
+      </div>
+    </section>
+
     <section id="roadmap" class="section">
       <p class="section-label">Future Roadmap</p>
       <h2>Starting simple. Built to scale.</h2>
@@ -133,5 +200,7 @@
   <footer class="footer">
     <p>© 2026 ScientiaLab. Built for open financial knowledge.</p>
   </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
