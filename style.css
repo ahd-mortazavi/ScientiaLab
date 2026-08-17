@@ -288,6 +288,30 @@ h1 {
   }
 }
 
+/* Notebooks section */
+.notebook-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 22px;
+  margin-top: 36px;
+  max-width: 1120px;
+}
+
+.notebook-card {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.notebook-card p {
+  margin-bottom: 0;
+}
+
+.notebook-card .btn {
+  align-self: flex-start;
+  margin-top: 8px;
+}
+
 .timeline {
   display: grid;
   gap: 24px;
