@@ -143,6 +143,61 @@
           slippage, taxes, or position limits. Always validate figures independently before acting on them.
         </p>
       </div>
+
+      <h2 class="tool-heading">Compound Growth &amp; DCA Calculator</h2>
+      <p>
+        A simple way to see what time, a starting balance, and steady monthly contributions can do at an
+        assumed rate of return — the same "give it time to compound" idea behind the "Play with Markets"
+        framework, worked out in numbers.
+      </p>
+
+      <div class="tool-card">
+        <form id="growth-calculator" class="tool-form" autocomplete="off">
+          <div class="tool-field">
+            <label for="initial-investment">Initial investment <span class="optional">(optional)</span></label>
+            <input type="number" id="initial-investment" min="0" step="any" placeholder="e.g. 5000" />
+          </div>
+
+          <div class="tool-field">
+            <label for="monthly-contribution">Monthly contribution <span class="optional">(optional)</span></label>
+            <input type="number" id="monthly-contribution" min="0" step="any" placeholder="e.g. 300" />
+          </div>
+
+          <div class="tool-field">
+            <label for="annual-return">Expected annual return (%)</label>
+            <input type="number" id="annual-return" step="any" placeholder="e.g. 7" required />
+          </div>
+
+          <div class="tool-field">
+            <label for="years">Years</label>
+            <input type="number" id="years" min="0" step="any" placeholder="e.g. 20" required />
+          </div>
+
+          <button type="submit" class="btn primary tool-submit">Calculate</button>
+        </form>
+
+        <div id="growth-results" class="tool-results" hidden>
+          <div class="result-row">
+            <span>Future value</span>
+            <strong id="result-future-value">—</strong>
+          </div>
+          <div class="result-row">
+            <span>Total contributed</span>
+            <strong id="result-total-contributed">—</strong>
+          </div>
+          <div class="result-row">
+            <span>Total growth</span>
+            <strong id="result-total-growth">—</strong>
+          </div>
+          <p id="growth-result-note" class="tool-note"></p>
+        </div>
+
+        <p class="tool-disclaimer">
+          Educational tool only. Assumes a constant annual return compounded monthly, with contributions
+          made at the end of each month. Real markets do not return a constant rate — this is a simplified
+          illustration, not a forecast or investment advice, and does not account for fees or taxes.
+        </p>
+      </div>
     </section>
 
     <section id="notebooks" class="section dark-section">

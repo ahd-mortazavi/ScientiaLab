@@ -204,6 +204,15 @@ h1 {
   box-shadow: 0 12px 35px rgba(7, 17, 31, 0.08);
 }
 
+.tool-heading {
+  margin-top: 64px;
+  padding-top: 40px;
+  border-top: 1px solid rgba(7, 17, 31, 0.12);
+  font-size: clamp(1.6rem, 3vw, 2.4rem);
+  line-height: 1.15;
+  margin-bottom: 18px;
+}
+
 .tool-form {
   display: grid;
   grid-template-columns: 1fr 1fr;
