@@ -1,293 +1,342 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-GB">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ScientiaLab | Open Financial Intelligence</title>
-  <meta name="description" content="ScientiaLab is an open knowledge initiative focused on quantitative analysis, financial services, and data-driven decision-making." />
+  <title>ScientiaLab | Andrew More — generative AI and finance, built in public</title>
+  <meta name="description" content="Andrew More's open portfolio: generative AI and LLM integration for finance, plus calculators and Python notebooks anyone can run, inspect and adapt." />
+  <meta name="author" content="Andrew More" />
+  <link rel="canonical" href="https://ahd-mortazavi.github.io/ScientiaLab/" />
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <meta name="theme-color" content="#07111f" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="ScientiaLab" />
+  <meta property="og:title" content="ScientiaLab — putting generative AI to work in finance" />
+  <meta property="og:description" content="AI experiments, calculators and Python notebooks by Andrew More. Open source, built in public." />
+  <meta property="og:url" content="https://ahd-mortazavi.github.io/ScientiaLab/" />
+  <meta property="og:image" content="https://ahd-mortazavi.github.io/ScientiaLab/assets/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,600;8..60,700&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
   <header class="site-header">
-    <nav class="navbar">
-      <a href="#" class="logo">Scientia<span>Lab</span></a>
+    <nav class="navbar container" aria-label="Main">
+      <a href="#top" class="logo">Scientia<span>Lab</span></a>
       <div class="nav-links">
-        <a href="#mission">Mission</a>
-        <a href="#areas">Learning Areas</a>
-        <a href="#tools">Tools</a>
+        <a href="#ai">AI focus</a>
+        <a href="#projects">Projects</a>
         <a href="#notebooks">Notebooks</a>
-        <a href="#roadmap">Roadmap</a>
-        <a href="https://www.scientiacapital.co.uk/" target="_blank">Scientia Capital</a>
+        <a href="#shipped">Shipped</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+        <a class="btn btn-outline-gold" href="https://github.com/ahd-mortazavi/ScientiaLab">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.9a3.4 3.4 0 0 0-.9-2.6c3.1-.4 6.4-1.5 6.4-7a5.4 5.4 0 0 0-1.5-3.8 5 5 0 0 0-.1-3.8s-1.2-.4-3.9 1.5a13.4 13.4 0 0 0-7 0C6.3 1.6 5.1 2 5.1 2a5 5 0 0 0-.1 3.8A5.4 5.4 0 0 0 3.5 9.6c0 5.4 3.3 6.6 6.4 7a3.4 3.4 0 0 0-.9 2.6V22"/></svg>
+          GitHub
+        </a>
       </div>
     </nav>
   </header>
 
-  <main>
-    <section class="hero">
-      <div class="hero-content">
-        <p class="eyebrow">Open Knowledge • Quantitative Thinking • Financial Empowerment</p>
-        <h1>Democratising Financial Intelligence Through Data</h1>
-        <p class="hero-text">
-          ScientiaLab is an open learning initiative created to share knowledge on quantitative analysis,
-          financial services, and data-driven decision-making with learners around the world.
-        </p>
-        <div class="hero-actions">
-          <a href="#mission" class="btn primary">Explore the Mission</a>
-          <a href="#roadmap" class="btn secondary">View Roadmap</a>
-        </div>
-      </div>
-    </section>
-
-    <section id="mission" class="section">
-      <p class="section-label">Our Mission</p>
-      <h2>Knowledge is power — and it should be accessible.</h2>
-      <p>
-        ScientiaLab exists to make financial and analytical education more accessible, especially for
-        people with limited access to traditional institutions, professional networks, or expensive resources.
-      </p>
-      <p>
-        Inspired by the broader Scientia vision, this project brings together science, experience, and ambition
-        to help people build clarity, confidence, and practical decision-making skills.
-      </p>
-    </section>
-
-    <section id="areas" class="section dark-section">
-      <p class="section-label">Learning Areas</p>
-      <h2>What ScientiaLab will explore</h2>
-
-      <div class="cards">
-        <article class="card">
-          <h3>Quantitative Analysis</h3>
-          <p>Statistics, probability, modelling, and analytical thinking for real-world financial problems.</p>
-        </article>
-
-        <article class="card">
-          <h3>Financial Services</h3>
-          <p>Concepts from investing, banking, risk management, markets, and wealth-building systems.</p>
-        </article>
-
-        <article class="card">
-          <h3>Data-Driven Decisions</h3>
-          <p>How to turn information into insight, and insight into better economic decisions.</p>
-        </article>
-
-        <article class="card">
-          <h3>Economic Empowerment</h3>
-          <p>Open resources designed to help learners grow regardless of geography, background, or income.</p>
-        </article>
-      </div>
-    </section>
-
-    <section id="tools" class="section">
-      <p class="section-label">Free Tools</p>
-      <h2>Position Size &amp; Risk Calculator</h2>
-      <p>
-        Every trade idea in a Scientia report includes an entry, a stop-loss, and a take-profit level. This
-        calculator turns those three numbers into a position size that keeps a single trade's risk to a fixed
-        share of an account, the same discipline behind the "Play with Markets" framework.
-      </p>
-
-      <div class="tool-card">
-        <form id="risk-calculator" class="tool-form" autocomplete="off">
-          <div class="tool-field">
-            <label for="account-size">Account size</label>
-            <input type="number" id="account-size" min="0" step="any" placeholder="e.g. 10000" required />
-          </div>
-
-          <div class="tool-field">
-            <label for="risk-percent">Risk per trade (%)</label>
-            <input type="number" id="risk-percent" min="0" max="100" step="any" placeholder="e.g. 1" required />
-          </div>
-
-          <div class="tool-field">
-            <label for="entry-price">Entry price</label>
-            <input type="number" id="entry-price" min="0" step="any" placeholder="e.g. 55.20" required />
-          </div>
-
-          <div class="tool-field">
-            <label for="stop-price">Stop-loss price</label>
-            <input type="number" id="stop-price" min="0" step="any" placeholder="e.g. 52.80" required />
-          </div>
-
-          <div class="tool-field">
-            <label for="target-price">Take-profit price <span class="optional">(optional)</span></label>
-            <input type="number" id="target-price" min="0" step="any" placeholder="e.g. 61.00" />
-          </div>
-
-          <button type="submit" class="btn primary tool-submit">Calculate</button>
-        </form>
-
-        <div id="risk-results" class="tool-results" hidden>
-          <div class="result-row">
-            <span>Dollar risk</span>
-            <strong id="result-risk-amount">—</strong>
-          </div>
-          <div class="result-row">
-            <span>Position size</span>
-            <strong id="result-shares">—</strong>
-          </div>
-          <div class="result-row">
-            <span>Position value</span>
-            <strong id="result-position-value">—</strong>
-          </div>
-          <div class="result-row" id="result-rr-row" hidden>
-            <span>Reward:risk</span>
-            <strong id="result-rr">—</strong>
-          </div>
-          <p id="result-note" class="tool-note"></p>
-        </div>
-
-        <p class="tool-disclaimer">
-          Educational tool only. It does not constitute financial advice and does not account for fees,
-          slippage, taxes, or position limits. Always validate figures independently before acting on them.
-        </p>
-      </div>
-
-      <h2 class="tool-heading">Compound Growth &amp; DCA Calculator</h2>
-      <p>
-        A simple way to see what time, a starting balance, and steady monthly contributions can do at an
-        assumed rate of return — the same "give it time to compound" idea behind the "Play with Markets"
-        framework, worked out in numbers.
-      </p>
-
-      <div class="tool-card">
-        <form id="growth-calculator" class="tool-form" autocomplete="off">
-          <div class="tool-field">
-            <label for="initial-investment">Initial investment <span class="optional">(optional)</span></label>
-            <input type="number" id="initial-investment" min="0" step="any" placeholder="e.g. 5000" />
-          </div>
-
-          <div class="tool-field">
-            <label for="monthly-contribution">Monthly contribution <span class="optional">(optional)</span></label>
-            <input type="number" id="monthly-contribution" min="0" step="any" placeholder="e.g. 300" />
-          </div>
-
-          <div class="tool-field">
-            <label for="annual-return">Expected annual return (%)</label>
-            <input type="number" id="annual-return" step="any" placeholder="e.g. 7" required />
-          </div>
-
-          <div class="tool-field">
-            <label for="years">Years</label>
-            <input type="number" id="years" min="0" step="any" placeholder="e.g. 20" required />
-          </div>
-
-          <button type="submit" class="btn primary tool-submit">Calculate</button>
-        </form>
-
-        <div id="growth-results" class="tool-results" hidden>
-          <div class="result-row">
-            <span>Future value</span>
-            <strong id="result-future-value">—</strong>
-          </div>
-          <div class="result-row">
-            <span>Total contributed</span>
-            <strong id="result-total-contributed">—</strong>
-          </div>
-          <div class="result-row">
-            <span>Total growth</span>
-            <strong id="result-total-growth">—</strong>
-          </div>
-          <p id="growth-result-note" class="tool-note"></p>
-        </div>
-
-        <p class="tool-disclaimer">
-          Educational tool only. Assumes a constant annual return compounded monthly, with contributions
-          made at the end of each month. Real markets do not return a constant rate — this is a simplified
-          illustration, not a forecast or investment advice, and does not account for fees or taxes.
-        </p>
-      </div>
-    </section>
-
-    <section id="notebooks" class="section dark-section">
-      <p class="section-label">Notebooks &amp; Tutorials</p>
-      <h2>Learn by running the code.</h2>
-      <p>
-        Hands-on Jupyter notebooks that build quantitative concepts from first principles in plain Python
-        and pandas — read the logic, run the cells, and adapt them to your own ideas.
-      </p>
-
-      <div class="notebook-grid">
-        <article class="card notebook-card">
-          <h3>Stacked-Uptrend Screener</h3>
-          <p>
-            Build SMA, EMA, MACD, RSI, and ATR from scratch, then use them to screen a ticker universe for
-            stacked-uptrend momentum setups. Includes a worked example on sample data and a one-line swap
-            to plug in real market data.
+  <main id="main">
+    <!-- Hero -->
+    <section id="top" class="hero">
+      <div class="hero-inner container">
+        <div class="hero-copy">
+          <p class="eyebrow on-dark">Andrew More · London</p>
+          <h1>Putting generative AI to work in finance, built in public.</h1>
+          <p class="hero-lead">
+            I'm a business analyst and IT project manager who loves connecting large language models to real
+            systems, especially in finance and investment. ScientiaLab is where I build that openly: AI experiments,
+            tools and notebooks anyone can run, inspect and adapt.
           </p>
-          <a href="https://github.com/ahd-mortazavi/ScientiaLab/blob/main/stacked_uptrend_screener.ipynb" target="_blank" class="btn primary">Open notebook →</a>
-        </article>
+          <div class="btn-row">
+            <a class="btn btn-gold" href="#projects">Explore projects</a>
+            <a class="btn btn-outline-gold" href="https://github.com/ahd-mortazavi/ScientiaLab">View code on GitHub</a>
+            <!-- Add when ready:
+            <a class="btn btn-outline-light" href="https://www.linkedin.com/in/YOUR-PROFILE/">LinkedIn</a>
+            <a class="btn btn-outline-light" href="assets/Andrew-More-CV.pdf">Download CV</a>
+            -->
+          </div>
+        </div>
 
-        <article class="card notebook-card">
-          <h3>Backtesting Engine From Scratch</h3>
-          <p>
-            Build a vectorized backtest by hand: turn a signal into a position, a position into an equity
-            curve, then see exactly how lookahead bias and trading costs change the story. Mechanics over
-            strategy — the plumbing works the same no matter what generates the signal.
-          </p>
-          <a href="https://github.com/ahd-mortazavi/ScientiaLab/blob/main/backtesting_engine_from_scratch.ipynb" target="_blank" class="btn primary">Open notebook →</a>
-        </article>
+        <aside class="glance" aria-label="At a glance">
+          <p class="eyebrow">At a glance</p>
+          <ul class="glance-list">
+            <li><span class="glance-num">2</span><span>calculators, live in the browser</span></li>
+            <li><span class="glance-num">2</span><span>notebooks that run end to end</span></li>
+            <li><span class="glance-num">AI</span><span>LLMs, RAG, agents and MCP integration</span></li>
+            <li><span class="glance-num">MSc</span><span>Investment Analysis, Aston University</span></li>
+          </ul>
+        </aside>
+      </div>
+
+      <div class="toolkit">
+        <ul class="toolkit-inner container" aria-label="Toolkit">
+          <li class="label">Toolkit</li>
+          <li class="ai">Generative AI</li>
+          <li class="ai">LLMs</li>
+          <li class="ai">RAG</li>
+          <li class="ai">AI agents</li>
+          <li class="ai">MCP</li>
+          <li class="ai">Prompt design</li>
+          <li>Python</li>
+          <li>pandas</li>
+          <li>JavaScript</li>
+          <li>Jupyter</li>
+          <li>Backtesting</li>
+          <li>Business analysis</li>
+          <li>Agile delivery</li>
+          <li>SAP S/4HANA</li>
+          <li>GitHub Actions</li>
+        </ul>
       </div>
     </section>
 
-    <section id="roadmap" class="section">
-      <p class="section-label">Future Roadmap</p>
-      <h2>Starting simple. Built to scale.</h2>
-
-      <div class="timeline">
-        <div class="timeline-item">
-          <span>01</span>
-          <div>
-            <h3>Launch the website</h3>
-            <p>Share the story, mission, and early ideas behind ScientiaLab.</p>
-          </div>
-        </div>
-
-        <div class="timeline-item">
-          <span>02</span>
-          <div>
-            <h3>Publish learning notes</h3>
-            <p>Create beginner-friendly explanations of financial and quantitative concepts.</p>
-          </div>
-        </div>
-
-        <div class="timeline-item">
-          <span>03</span>
-          <div>
-            <h3>Add practical projects</h3>
-            <p>Develop notebooks, case studies, and examples using real financial data.</p>
-          </div>
-        </div>
-
-        <div class="timeline-item">
-          <span>04</span>
-          <div>
-            <h3>Build an open knowledge hub</h3>
-            <p>Grow ScientiaLab into a structured library for global learners.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section connection">
-      <p class="section-label">Connection to Scientia Capital Management</p>
-      <h2>The open learning lab behind the Scientia vision.</h2>
-      <p>
-        Scientia Capital Management focuses on AI-powered investing and market intelligence.
-        ScientiaLab complements that vision by focusing on open education, research notes,
-        learning resources, and practical knowledge sharing.
+    <!-- AI focus -->
+    <section id="ai" class="section container" style="padding-bottom: 24px;">
+      <p class="eyebrow">AI focus</p>
+      <h2>AI that works inside real systems, not beside them.</h2>
+      <p class="section-lead">
+        What excites me most about generative AI is integration: models connected to data, tools and people.
+        In finance and investment that means grounded answers, clear audit trails and a human in the loop.
       </p>
-      <a href="https://www.scientiacapital.co.uk/" target="_blank" class="text-link">
-        Visit Scientia Capital Management →
-      </a>
+      <div class="ai-grid">
+        <article class="ai-card">
+          <div class="icon-tile"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 3v18h18"/><path d="M7 15l4-4 3 3 5-6"/></svg></div>
+          <h3>LLMs on financial data</h3>
+          <p>Official economic data turned into plain-English notes that a model drafts and a person reviews.</p>
+        </article>
+        <article class="ai-card">
+          <div class="icon-tile"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 0 0 5.4-5.4l-2.5 2.5-2.4-.6-.6-2.4z"/></svg></div>
+          <h3>Agents and MCP</h3>
+          <p>Giving AI assistants safe, well-defined tools, so they run a calculation instead of guessing one.</p>
+        </article>
+        <article class="ai-card">
+          <div class="icon-tile"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20V3H6.5A2.5 2.5 0 0 0 4 5.5z"/><path d="M8 7h8M8 11h6"/></svg></div>
+          <h3>Retrieval-augmented generation</h3>
+          <p>Answers grounded in source documents, with citations a reader can check for themselves.</p>
+        </article>
+        <article class="ai-card">
+          <div class="icon-tile"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg></div>
+          <h3>Trustworthy AI in finance</h3>
+          <p>Evaluation, guardrails and look-ahead bias: knowing when a model's answer can't be trusted.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="section container">
+      <p class="eyebrow">Featured projects</p>
+      <h2>Proof of work you can run right now.</h2>
+      <p class="section-lead">Each project solves one clear problem, shows its maths, and links straight to the code.</p>
+
+      <div class="project-grid">
+        <article class="project-card">
+          <div class="project-preview" aria-hidden="true">
+            <div class="preview-row"><span>Cash at risk</span><strong>£100.00</strong></div>
+            <div class="preview-row"><span>Position size</span><strong>41 units</strong></div>
+            <div class="preview-row"><span>Reward : risk</span><strong class="gold">1 : 2.42</strong></div>
+          </div>
+          <div class="project-body">
+            <div class="chip-row"><span class="chip chip-live">Live tool</span></div>
+            <h3>Position Size &amp; Risk Calculator</h3>
+            <p>Turns entry, stop-loss and a risk budget into a position size, so one trade never risks more than you chose.</p>
+            <p class="tech">JavaScript · no dependencies · runs offline</p>
+            <div class="card-links">
+              <a href="tools/position-size.html">Try it →</a>
+              <a href="https://github.com/ahd-mortazavi/ScientiaLab/blob/main/script.js">View code</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-preview preview-bars" aria-hidden="true">
+            <span style="height: 18%; opacity: 0.35;"></span>
+            <span style="height: 26%; opacity: 0.42;"></span>
+            <span style="height: 35%; opacity: 0.5;"></span>
+            <span style="height: 46%; opacity: 0.6;"></span>
+            <span style="height: 59%; opacity: 0.7;"></span>
+            <span style="height: 75%; opacity: 0.82;"></span>
+            <span style="height: 94%;"></span>
+          </div>
+          <div class="project-body">
+            <div class="chip-row"><span class="chip chip-live">Live tool</span></div>
+            <h3>Compound Growth &amp; DCA Calculator</h3>
+            <p>Shows what time, a starting balance and steady monthly saving can do at an assumed return.</p>
+            <p class="tech">JavaScript · annuity maths · handles 0% and negative returns</p>
+            <div class="card-links">
+              <a href="tools/compound-growth.html">Try it →</a>
+              <a href="https://github.com/ahd-mortazavi/ScientiaLab/blob/main/script.js">View code</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card is-next">
+          <div class="project-preview" aria-hidden="true">
+            <div class="bubble bubble-user">Size a trade: £10,000 account, 1% risk, entry 55.20, stop 52.80</div>
+            <div class="tool-call">→ calls tool <b>position_size</b></div>
+            <div class="bubble bubble-ai">41 units, £100.00 at risk.</div>
+          </div>
+          <div class="project-body">
+            <div class="chip-row"><span class="chip chip-next">Coming next</span><span class="chip chip-ai">AI integration</span></div>
+            <h3>ScientiaLab MCP server</h3>
+            <p>Lets Claude and other AI assistants call these calculators as tools, so answers come from tested code rather than a model's guess.</p>
+            <p class="tech">Python · Model Context Protocol · LLM tool use</p>
+            <div class="card-links"><a href="#shipped">See roadmap →</a></div>
+          </div>
+        </article>
+
+        <article class="project-card is-next">
+          <div class="project-preview" aria-hidden="true">
+            <div class="note-title">Weekly UK economy, in plain English</div>
+            <div class="note-line" style="width: 92%;"></div>
+            <div class="note-line" style="width: 80%;"></div>
+            <div class="note-line" style="width: 86%;"></div>
+            <div class="note-tags"><span class="t-ai">Drafted by AI</span><span class="t-human">Reviewed by a human</span></div>
+          </div>
+          <div class="project-body">
+            <div class="chip-row"><span class="chip chip-next">Coming next</span><span class="chip chip-ai">Generative AI</span></div>
+            <h3>AI-drafted macro notes</h3>
+            <p>An LLM summarises the latest Bank of England and ONS data each week; every note is checked against the figures and approved before it goes live.</p>
+            <p class="tech">GitHub Actions · LLM API · automated fact checks</p>
+            <div class="card-links"><a href="#shipped">See roadmap →</a></div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Notebooks -->
+    <section id="notebooks" class="section section-white">
+      <div class="container">
+        <p class="eyebrow">Notebooks</p>
+        <h2>Learn by running the code.</h2>
+        <p class="section-lead">Plain Python and pandas, built from first principles, on synthetic data so every cell runs anywhere.</p>
+        <div class="notebook-grid">
+          <article class="notebook-card">
+            <div class="chip-row"><span class="chip chip-neutral">Python · pandas</span><span class="chip chip-neutral">Synthetic data</span></div>
+            <h3>Backtesting Engine From Scratch</h3>
+            <p>Signal to position to equity curve, by hand — then see exactly how look-ahead bias and trading costs change the story.</p>
+<pre class="code-snippet"><code>position = signal.shift(1)  <span class="c"># no peeking</span>
+returns  = position * prices.pct_change()</code></pre>
+            <div class="btn-row">
+              <a class="btn btn-dark" href="https://colab.research.google.com/github/ahd-mortazavi/ScientiaLab/blob/main/backtesting_engine_from_scratch.ipynb">Open in Colab</a>
+              <a class="btn btn-outline-dark" href="https://github.com/ahd-mortazavi/ScientiaLab/blob/main/backtesting_engine_from_scratch.ipynb">Open on GitHub</a>
+            </div>
+          </article>
+
+          <article class="notebook-card">
+            <div class="chip-row"><span class="chip chip-neutral">Python · pandas</span><span class="chip chip-neutral">Synthetic data</span><span class="chip chip-neutral">Indicators from scratch</span></div>
+            <h3>An Illustrative Trend Screener</h3>
+            <p>Build SMA, EMA, MACD, RSI and ATR from first principles, then combine them into an example screen on fictional tickers.</p>
+<pre class="code-snippet"><code>def rsi(close, window=14):
+    delta = close.diff()  <span class="c"># gains vs losses</span></code></pre>
+            <div class="btn-row">
+              <a class="btn btn-dark" href="https://colab.research.google.com/github/ahd-mortazavi/ScientiaLab/blob/main/stacked_uptrend_screener.ipynb">Open in Colab</a>
+              <a class="btn btn-outline-dark" href="https://github.com/ahd-mortazavi/ScientiaLab/blob/main/stacked_uptrend_screener.ipynb">Open on GitHub</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Shipped and next -->
+    <section id="shipped" class="section container">
+      <p class="eyebrow">Shipped &amp; next</p>
+      <h2>Built in public, one release at a time.</h2>
+      <div class="timeline-cols" style="margin-top: 40px;">
+        <div class="timeline-col">
+          <h3>Shipped</h3>
+          <ol class="timeline">
+            <li><span class="when">Nov 2026</span><span class="what">Portfolio redesign with a focus on AI integration</span></li>
+            <li><span class="when">Sep 2026</span><span class="what">Compound Growth &amp; DCA Calculator</span></li>
+            <li><span class="when">Aug 2026</span><span class="what">Backtesting Engine From Scratch notebook</span></li>
+            <li><span class="when">Aug 2026</span><span class="what">Trend screener notebook</span></li>
+            <li><span class="when">Aug 2026</span><span class="what">Position Size &amp; Risk Calculator</span></li>
+            <li><span class="when">Apr 2026</span><span class="what">ScientiaLab website launched</span></li>
+          </ol>
+        </div>
+        <div class="timeline-col">
+          <h3>Next</h3>
+          <ol class="timeline is-next">
+            <li><span class="when">Up next</span><span class="what">scientialab Python library with tests and CI</span></li>
+            <li><span class="when">Planned</span><span class="what">Run every notebook in the browser</span></li>
+            <li><span class="when">Planned</span><span class="what">Backtest Playground</span></li>
+            <li><span class="when">Planned</span><span class="what">Self-updating UK macro dashboard</span></li>
+            <li><span class="when">Planned · AI</span><span class="what">AI-drafted weekly macro notes, human-reviewed</span></li>
+            <li><span class="when">Planned · AI</span><span class="what">ScientiaLab MCP server for AI assistants</span></li>
+            <li><span class="when">Exploring · AI</span><span class="what">A tutor that answers from ScientiaLab's own notebooks, with citations</span></li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="section-dark">
+      <div class="about-inner container section">
+        <div class="about-intro">
+          <div class="avatar" role="img" aria-label="Andrew More">AM</div>
+          <p class="eyebrow on-dark" style="margin: 0;">About</p>
+          <h2>Andrew More</h2>
+        </div>
+        <div class="about-body">
+          <p>I bridge business and technology: I've led ERP and CRM change in shipping and the charity sector, and I study markets with the same discipline.</p>
+          <p>Today my passion is AI integration — how generative AI and large language models can sit safely inside real business systems, especially in finance and investment. ScientiaLab is where I explore that in the open.</p>
+          <div class="about-grid">
+            <div class="about-card">
+              <h3>24-7 Prayer · 2024–present</h3>
+              <p>IT Project Manager / Business Analyst, leading a Beacon CRM transformation.</p>
+            </div>
+            <div class="about-card">
+              <h3>Centurion Shipping</h3>
+              <p>SAP S/4HANA implementation across Core, TM, TRM and IS-Oil.</p>
+            </div>
+            <div class="about-card">
+              <h3>Education</h3>
+              <p>MSc Investment Analysis, Aston University. MSc Industrial Engineering, Kharazmi University.</p>
+            </div>
+            <div class="about-card">
+              <h3>Community</h3>
+              <p>Trustee, Anawim (Birmingham). Community Advisory Board, International Rescue Committee.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section container" style="padding-bottom: 80px;">
+      <div class="contact-card">
+        <div class="contact-copy">
+          <p class="eyebrow">Contact</p>
+          <h2>Let's talk about roles and projects.</h2>
+          <p>AI integration, business analysis and IT delivery — I reply to every message.</p>
+        </div>
+        <div class="contact-actions btn-row">
+          <!-- Add when ready:
+          <a class="btn btn-gold" href="mailto:YOUR-EMAIL">Email me</a>
+          <a class="btn btn-outline-dark" href="https://www.linkedin.com/in/YOUR-PROFILE/">LinkedIn</a>
+          -->
+          <a class="btn btn-gold" href="https://github.com/ahd-mortazavi">GitHub profile</a>
+        </div>
+      </div>
     </section>
   </main>
 
   <footer class="footer">
-    <p>© 2026 ScientiaLab. Built for open financial knowledge.</p>
+    <div class="footer-inner container">
+      <span>© 2026 Andrew More · ScientiaLab · code under the MIT licence</span>
+      <span>Educational content only, not financial advice. Tools use synthetic or your own data.</span>
+    </div>
   </footer>
-
-  <script src="script.js"></script>
 </body>
 </html>
