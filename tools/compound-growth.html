@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Compound Growth &amp; DCA Calculator | ScientiaLab</title>
+  <meta name="description" content="Free, open-source compound growth calculator: see what a starting balance and steady monthly saving can do at an assumed return." />
+  <meta name="author" content="Andrew More" />
+  <link rel="canonical" href="https://ahd-mortazavi.github.io/ScientiaLab/tools/compound-growth.html" />
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml" />
+  <meta name="theme-color" content="#07111f" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="ScientiaLab" />
+  <meta property="og:title" content="Compound Growth &amp; DCA Calculator — ScientiaLab" />
+  <meta property="og:description" content="What time, a starting balance and steady monthly saving can do at an assumed return. Free and open source." />
+  <meta property="og:url" content="https://ahd-mortazavi.github.io/ScientiaLab/tools/compound-growth.html" />
+  <meta property="og:image" content="https://ahd-mortazavi.github.io/ScientiaLab/assets/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,600;8..60,700&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../style.css" />
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <nav class="navbar container" aria-label="Main">
+      <a href="../" class="logo">Scientia<span>Lab</span></a>
+      <div class="nav-links">
+        <a href="../#ai">AI focus</a>
+        <a href="../#projects">Projects</a>
+        <a href="../#notebooks">Notebooks</a>
+        <a href="../#about">About</a>
+        <a class="btn btn-outline-gold" href="https://github.com/ahd-mortazavi/ScientiaLab">GitHub</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="page-hero">
+      <div class="page-hero-inner container">
+        <p class="breadcrumb"><a href="../#projects">Projects</a> <span aria-hidden="true">/</span> Compound Growth &amp; DCA Calculator</p>
+        <div class="chip-row"><span class="chip chip-live">Live tool</span><span class="chip chip-dark">JavaScript · no dependencies</span></div>
+        <h1>Compound Growth &amp; DCA Calculator</h1>
+        <p class="hero-lead">See what time, a starting balance and steady monthly contributions can do at an assumed rate of return.</p>
+        <div class="btn-row">
+          <a class="btn btn-gold" href="https://github.com/ahd-mortazavi/ScientiaLab/blob/main/script.js">View code</a>
+          <a class="btn btn-outline-light" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fahd-mortazavi.github.io%2FScientiaLab%2Ftools%2Fcompound-growth.html">Share on LinkedIn</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="tool-layout container">
+      <div class="tool-card">
+        <div class="tool-card-head">
+          <h2>Your plan</h2>
+          <div class="segmented" role="group" aria-label="Currency" data-currency-group>
+            <button type="button" data-currency="GBP" aria-pressed="true">£ GBP</button>
+            <button type="button" data-currency="USD" aria-pressed="false">$ USD</button>
+            <button type="button" data-currency="EUR" aria-pressed="false">€ EUR</button>
+          </div>
+        </div>
+
+        <form id="growth-calculator" class="tool-form" autocomplete="off" novalidate>
+          <label class="tool-field" for="initial-investment"><span>Initial investment (<span data-currency-symbol>£</span>) <span class="optional">(optional)</span></span>
+            <input type="number" id="initial-investment" min="0" step="any" inputmode="decimal" value="5000" />
+          </label>
+          <label class="tool-field" for="monthly-contribution"><span>Monthly contribution (<span data-currency-symbol>£</span>) <span class="optional">(optional)</span></span>
+            <input type="number" id="monthly-contribution" min="0" step="any" inputmode="decimal" value="300" />
+          </label>
+          <label class="tool-field" for="annual-return"><span>Assumed annual return (%)</span>
+            <input type="number" id="annual-return" step="any" inputmode="decimal" value="5" />
+          </label>
+          <label class="tool-field" for="years"><span>Years</span>
+            <input type="number" id="years" min="0" step="any" inputmode="decimal" value="20" />
+          </label>
+        </form>
+
+        <dl class="results" aria-live="polite">
+          <div><dt>Future value</dt><dd id="result-future-value" class="gold">—</dd></div>
+          <div><dt>Total contributed</dt><dd id="result-total-contributed">—</dd></div>
+          <div><dt>Total growth</dt><dd id="result-total-growth">—</dd></div>
+        </dl>
+        <p id="growth-result-note" class="results-note" aria-live="polite"></p>
+
+        <p class="tool-disclaimer">Educational tool only. Assumes a constant return compounded monthly, with contributions at the end of each month. Real markets never return a constant rate — this is an illustration, not a forecast or advice, and ignores fees and taxes.</p>
+      </div>
+
+      <aside class="tool-aside">
+        <div class="aside-card">
+          <h2>How it works</h2>
+          <div class="formula">
+            <span>r = annual return ÷ 12, n = years × 12</span>
+            <span>lump sum = initial × (1 + r)ⁿ</span>
+            <span>contributions = monthly × ((1 + r)ⁿ − 1) ÷ r</span>
+          </div>
+          <p>Future value is the two added together. At a 0% return it is simply everything you put in.</p>
+        </div>
+        <div class="aside-card">
+          <h2>Go deeper</h2>
+          <ul>
+            <li><a href="position-size.html">Position Size &amp; Risk Calculator</a></li>
+            <li><a href="https://github.com/ahd-mortazavi/ScientiaLab/blob/main/backtesting_engine_from_scratch.ipynb">Backtesting Engine From Scratch</a></li>
+            <li><a href="https://github.com/ahd-mortazavi/ScientiaLab/blob/main/script.js">Read the source</a></li>
+          </ul>
+        </div>
+      </aside>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner container">
+      <span>© 2026 Andrew More · ScientiaLab</span>
+      <span>Educational content only, not financial advice.</span>
+    </div>
+  </footer>
+
+  <script src="../script.js"></script>
+</body>
+</html>

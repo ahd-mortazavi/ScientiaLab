@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Position Size &amp; Risk Calculator | ScientiaLab</title>
+  <meta name="description" content="Free, open-source position size calculator: turn entry, stop-loss and a risk budget into a position size. Runs in your browser." />
+  <meta name="author" content="Andrew More" />
+  <link rel="canonical" href="https://ahd-mortazavi.github.io/ScientiaLab/tools/position-size.html" />
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml" />
+  <meta name="theme-color" content="#07111f" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="ScientiaLab" />
+  <meta property="og:title" content="Position Size &amp; Risk Calculator — ScientiaLab" />
+  <meta property="og:description" content="Size a trade so hitting your stop costs exactly the share of your account you chose. Free and open source." />
+  <meta property="og:url" content="https://ahd-mortazavi.github.io/ScientiaLab/tools/position-size.html" />
+  <meta property="og:image" content="https://ahd-mortazavi.github.io/ScientiaLab/assets/og-position-size.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,600;8..60,700&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../style.css" />
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <nav class="navbar container" aria-label="Main">
+      <a href="../" class="logo">Scientia<span>Lab</span></a>
+      <div class="nav-links">
+        <a href="../#ai">AI focus</a>
+        <a href="../#projects">Projects</a>
+        <a href="../#notebooks">Notebooks</a>
+        <a href="../#about">About</a>
+        <a class="btn btn-outline-gold" href="https://github.com/ahd-mortazavi/ScientiaLab">GitHub</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="page-hero">
+      <div class="page-hero-inner container">
+        <p class="breadcrumb"><a href="../#projects">Projects</a> <span aria-hidden="true">/</span> Position Size &amp; Risk Calculator</p>
+        <div class="chip-row"><span class="chip chip-live">Live tool</span><span class="chip chip-dark">JavaScript · no dependencies</span></div>
+        <h1>Position Size &amp; Risk Calculator</h1>
+        <p class="hero-lead">Size a trade so that hitting your stop-loss costs exactly the share of your account you chose — no more.</p>
+        <div class="btn-row">
+          <a class="btn btn-gold" href="https://github.com/ahd-mortazavi/ScientiaLab/blob/main/script.js">View code</a>
+          <a class="btn btn-outline-light" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fahd-mortazavi.github.io%2FScientiaLab%2Ftools%2Fposition-size.html">Share on LinkedIn</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="tool-layout container">
+      <div class="tool-card">
+        <div class="tool-card-head">
+          <h2>Your trade</h2>
+          <div class="segmented" role="group" aria-label="Currency" data-currency-group>
+            <button type="button" data-currency="GBP" aria-pressed="true">£ GBP</button>
+            <button type="button" data-currency="USD" aria-pressed="false">$ USD</button>
+            <button type="button" data-currency="EUR" aria-pressed="false">€ EUR</button>
+          </div>
+        </div>
+
+        <form id="risk-calculator" class="tool-form" autocomplete="off" novalidate>
+          <label class="tool-field" for="account-size"><span>Account size (<span data-currency-symbol>£</span>)</span>
+            <input type="number" id="account-size" min="0" step="any" inputmode="decimal" value="10000" />
+          </label>
+          <label class="tool-field" for="risk-percent"><span>Risk per trade (%)</span>
+            <input type="number" id="risk-percent" min="0" max="100" step="any" inputmode="decimal" value="1" />
+          </label>
+          <label class="tool-field" for="entry-price"><span>Entry price</span>
+            <input type="number" id="entry-price" min="0" step="any" inputmode="decimal" value="55.20" />
+          </label>
+          <label class="tool-field" for="stop-price"><span>Stop-loss price</span>
+            <input type="number" id="stop-price" min="0" step="any" inputmode="decimal" value="52.80" />
+          </label>
+          <label class="tool-field" for="target-price"><span>Take-profit price <span class="optional">(optional)</span></span>
+            <input type="number" id="target-price" min="0" step="any" inputmode="decimal" value="61.00" />
+          </label>
+          <div class="tool-field"><span>Direction</span>
+            <div class="readout" id="result-direction">—</div>
+          </div>
+        </form>
+
+        <dl class="results" aria-live="polite">
+          <div><dt>Cash at risk</dt><dd id="result-risk-amount">—</dd></div>
+          <div><dt>Position size</dt><dd id="result-shares">—</dd></div>
+          <div><dt>Position value</dt><dd id="result-position-value">—</dd></div>
+          <div><dt>Reward : risk</dt><dd id="result-rr" class="gold">—</dd></div>
+        </dl>
+        <p id="result-note" class="results-note" aria-live="polite"></p>
+
+        <p class="tool-disclaimer">Educational tool only, not financial advice. Ignores fees, slippage, taxes and position limits. Always check figures independently before acting on them.</p>
+      </div>
+
+      <aside class="tool-aside">
+        <div class="aside-card">
+          <h2>How it works</h2>
+          <div class="formula">
+            <span>cash at risk = account × risk %</span>
+            <span>units = ⌊cash at risk ÷ |entry − stop|⌋</span>
+            <span>reward : risk = |target − entry| ÷ |entry − stop|</span>
+          </div>
+          <p>Direction comes from where your stop sits: below entry means long, above means short. A target on the stop's side of entry is flagged rather than scored.</p>
+        </div>
+        <div class="aside-card">
+          <h2>Go deeper</h2>
+          <ul>
+            <li><a href="https://github.com/ahd-mortazavi/ScientiaLab/blob/main/backtesting_engine_from_scratch.ipynb">Backtesting Engine From Scratch</a></li>
+            <li><a href="compound-growth.html">Compound Growth &amp; DCA Calculator</a></li>
+            <li><a href="https://github.com/ahd-mortazavi/ScientiaLab/blob/main/script.js">Read the source</a></li>
+          </ul>
+        </div>
+      </aside>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner container">
+      <span>© 2026 Andrew More · ScientiaLab</span>
+      <span>Educational content only, not financial advice.</span>
+    </div>
+  </footer>
+
+  <script src="../script.js"></script>
+</body>
+</html>
